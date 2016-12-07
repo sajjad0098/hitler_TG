@@ -142,6 +142,8 @@ Change language to English
  	
 ⚓️ !setlang فا
 تغییر زبان به فارسی با دستورات فارسی
+			
+Powered By @Sajjad_Hitler			
 ]]
 end
   elseif not is_sudo(msg) then
@@ -149,9 +151,8 @@ end
 end
 end
  return {
- advan = {
- "Created by: @janlou",
- "Powered by: @AdvanTm",
+sajjad0098 = {
+ "Created by: @Sajjad_Hitler",
  "CopyRight all right reserved",
  },
  patterns = {
