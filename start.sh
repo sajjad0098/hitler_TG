@@ -98,25 +98,14 @@ install2() {
   echo ""
   echo "Bot has been installed! you can run bot with:"
   echo ""
+  echo ""
+  echo ""
   echo "RUN BOT WITH CLI MOD:"
   echo "$0"
   echo ""
   sleep 0.9
   echo ""
-  echo "RUN BOT WITH SELF MOD:"
-  echo "$0 self"
-  echo ""
-  sleep 0.9
-  echo ""
-  echo "RUN BOT WITH API MOD:"
-  echo "$0 api"
-  echo ""
-  sleep 0.9
-  echo ""
-  echo "RUN BOT WITH ICLI MOD:"
-  echo "$0 icli"
-  echo ""
-  echo ""
+
   
   exit 1
 }
@@ -203,20 +192,7 @@ else
 fi
   
 if [ "$1" = "api" ]; then
-   echo -e "\033[38;5;208m"
-   echo -e "----------------------------------------------"
-   echo -e "     ___    ____ __    __ ___    _   _        "
-   echo -e "    / _ \  |  _ \\ \  / // _ \  | \  ||       "
-   echo -e "   / /_\ \ | |_| |\ \/ // /_\ \ ||\\_||       "
-   echo -e "  /_/   \_\|____/  \__//_/   \_\|| \__|       "
-   echo -e "                                              "
-   echo -e "----------------------------------------------"
-   echo -e "                  API MOD                     "
-   echo -e "         ----------------------------         "
-   echo -e "         CopyRight all right reserved         "
-   echo -e "----------------------------------------------"
-   echo -e "                                              \033[0;00m"
-   echo -e "\e[36m"
+
    
     cd system
     if [ -e "bot.lua" ]; then
@@ -244,21 +220,7 @@ if [ "$1" = "api" ]; then
    ./tg/bin/telegram-cli -b ./tg/tg-server.pub -s ./system/bot.lua -l 1 -E $@
    sleep 3
   done
-  elif [ "$1" = "icli" ]; then
-   echo -e "\033[38;5;208m"
-   echo -e "----------------------------------------------"
-   echo -e "     ___    ____ __    __ ___    _   _        "
-   echo -e "    / _ \  |  _ \\ \  / // _ \  | \  ||       "
-   echo -e "   / /_\ \ | |_| |\ \/ // /_\ \ ||\\_||       "
-   echo -e "  /_/   \_\|____/  \__//_/   \_\|| \__|       "
-   echo -e "                                              "
-   echo -e "----------------------------------------------"
-   echo -e "                  ICLI MOD                    "
-   echo -e "         ----------------------------         "
-   echo -e "         CopyRight all right reserved         "
-   echo -e "----------------------------------------------"
-   echo -e "                                              \033[0;00m"
-   echo -e "\e[36m"
+
    
     cd system
     if [ -e "icli.lua" ]; then
@@ -286,21 +248,7 @@ if [ "$1" = "api" ]; then
    ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./system/icli.lua -l 1 -E $@
    sleep 3
   done
-elif [ "$1" = "self" ]; then
-   echo -e "\033[38;5;208m"
-   echo -e "----------------------------------------------"
-   echo -e "     ___    ____ __    __ ___    _   _        "
-   echo -e "    / _ \  |  _ \\ \  / // _ \  | \  ||       "
-   echo -e "   / /_\ \ | |_| |\ \/ // /_\ \ ||\\_||       "
-   echo -e "  /_/   \_\|____/  \__//_/   \_\|| \__|       "
-   echo -e "                                              "
-   echo -e "----------------------------------------------"
-   echo -e "                   SELF MOD                   "
-   echo -e "         ----------------------------         "
-   echo -e "         CopyRight all right reserved         "
-   echo -e "----------------------------------------------"
-   echo -e "                                              \033[0;00m"
-   echo -e "\e[36m"
+
    
     if [ -d "plugins-self" ]; then
      echo "Folder plugins for advan self mod exists."
@@ -352,20 +300,7 @@ elif [ "$1" = "help" ]; then
   echo "Cli mod for your bot's account"
   echo ""
 fi
-   echo -e "\033[38;5;208m"
-   echo -e "----------------------------------------------"
-   echo -e "     ___    ____ __    __ ___    _   _        "
-   echo -e "    / _ \  |  _ \\ \  / // _ \  | \  ||       "
-   echo -e "   / /_\ \ | |_| |\ \/ // /_\ \ ||\\_||       "
-   echo -e "  /_/   \_\|____/  \__//_/   \_\|| \__|       "
-   echo -e "                                              "
-   echo -e "----------------------------------------------"
-   echo -e "                   CLI MOD                    "
-   echo -e "         ----------------------------         "
-   echo -e "         CopyRight all right reserved         "
-   echo -e "----------------------------------------------"
-   echo -e "                                              \033[0;00m"
-   echo -e "\e[36m"
+
    
     cd system
     if [ -e "bot.lua" ]; then
