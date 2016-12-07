@@ -15,7 +15,7 @@ local function run(msg, matches)
        local hash = 'muteall:'..msg.to.id
        if not matches[2] then
               redis:set(hash, true)
-             return "mute all has been enabled\nPowered By @@Sajjad_Hitler"
+             return "mute all has been enabled\nPowered By @Sajjad_Hitler"
  else
 -- by @Blackwolf_admin 
 local hour = string.gsub(matches[2], 'h', '')
@@ -45,5 +45,5 @@ run = run,
   pre_process = pre_process
 }
 end
--- by @To_My_Amigos
--- our channel : Just_Links 
+-- by @Sajjad_Hitler
+-- our channel : @robot_list
