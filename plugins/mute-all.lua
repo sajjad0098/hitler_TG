@@ -15,7 +15,7 @@ local function run(msg, matches)
        local hash = 'muteall:'..msg.to.id
        if not matches[2] then
               redis:set(hash, true)
-             return "mute all has been enabled\nPowered By @To_My_Amigos"
+             return "mute all has been enabled\nPowered By @@Sajjad_Hitler"
  else
 -- by @Blackwolf_admin 
 local hour = string.gsub(matches[2], 'h', '')
@@ -26,13 +26,13 @@ local second = string.gsub(matches[4], 's', '')
  local num3 = tonumber(second)
 local num4 = tonumber(num1 + num2 + num3)
 redis:setex(hash, num4, true)
- return "mute all has been enabled for\n⏺ hour(s) : "..matches[2].."\n⏺ minute(s) : "..matches[3].." \n⏺ second(s) : "..matches[4].."\nPowered By @To_My_Amigos"
+ return "mute all has been enabled for\n⏺ hour(s) : "..matches[2].."\n⏺ minute(s) : "..matches[3].." \n⏺ second(s) : "..matches[4].."\nPowered By @Sajjad_Hitler"
  end
  end
 if matches[1] == 'unmuteall' and is_momod(msg) then
                local hash = 'muteall:'..msg.to.id
         redis:del(hash)
-          return "mute all has been disabled\nPowered By @To_My_Amigos"
+          return "mute all has been disabled\nPowered By @Sajjad_Hitler"
   end
 end
 return {
