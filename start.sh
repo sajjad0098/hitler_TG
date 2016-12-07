@@ -8,7 +8,7 @@ update() {
   git submodule update --init --recursive
   install_rocks
 }
-#By: @AdvanTm
+# By: @To_My_Amigos
 # Will install luarocks on THIS_DIR/.luarocks
 install_luarocks() {
   git clone https://github.com/keplerproject/luarocks.git
@@ -159,7 +159,7 @@ error() {
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev tmux subversion
 }
 
-#By: @AdvanTm
+# By: @To_My_Amigos
 if [ "$1" = "install" ]; then
   install
 elif [ "$1" = "update" ]; then
@@ -189,111 +189,11 @@ else
 	else
 	    que
     fi
-fi
-  
-if [ "$1" = "api" ]; then
 
-   
-    cd system
-    if [ -e "bot.lua" ]; then
-     echo
-    elif [ -e "self.lua" ]; then
-	 rm self.lua 
-	 wget http://nahrup.ir/view/909/bot-2.txt
-     mv bot-2.txt bot.lua
-	elif [ -e "icli.lua" ]; then
-	 rm icli.lua 
-	 wget http://nahrup.ir/view/909/bot-2.txt
-     mv bot-2.txt bot.lua
-	fi
-	if [ -e "commands.lua" ]; then
-	 echo
-	elif [ -e "commands-self.lua" ]; then
-	 rm commands-self.lua
-	 wget http://www.folder98.ir/1395/07/1475545247.txt
-	 mv 1475545247.txt commands.lua
-	fi
-	cd ..
-   
-  while true; do
-   rm -r ../.telegram-cli/state
-   ./tg/bin/telegram-cli -b ./tg/tg-server.pub -s ./system/bot.lua -l 1 -E $@
-   sleep 3
-  done
-
-   
-    cd system
-    if [ -e "icli.lua" ]; then
-     echo
-    elif [ -e "self.lua" ]; then
-	 rm self.lua 
-	 wget http://nahrup.ir/view/910/bot-icli-2.txt
-     mv bot-icli-2.txt icli.lua
-	elif [ -e "bot.lua" ]; then
-	 rm bot.lua 
-	 wget http://nahrup.ir/view/910/bot-icli-2.txt
-     mv bot-icli-2.txt icli.lua
-	fi
-	if [ -e "commands.lua" ]; then
-	 echo
-	elif [ -e "commands-self.lua" ]; then
-	 rm commands-self.lua
-	 wget http://www.folder98.ir/1395/07/1475545247.txt
-	 mv 1475545247.txt commands.lua
-	fi
-	cd ..
-   
-  while true; do
-   rm -r ../.telegram-cli/state
-   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./system/icli.lua -l 1 -E $@
-   sleep 3
-  done
-
-   
-    if [ -d "plugins-self" ]; then
-     echo "Folder plugins for advan self mod exists."
-    elif [ ! -d "plugins-self" ]; then
-		 echo "Please wait for create plugins-self folders..."
-     git clone https://gitlab.com/antispam/plugins-self
-    fi
-   
-    cd system
-    if [ -e "bot.lua" ]; then
-     rm bot.lua 
-	 wget http://www.folder98.ir/1395/07/1475564183.txt
-     mv 1475564183.txt self.lua
-	elif [ -e "icli.lua" ]; then
-	 rm icli.lua 
-	 wget http://www.folder98.ir/1395/07/1475564183.txt
-     mv 1475564183.txt self.lua
-    elif [ -e "self.lua" ]; then
-	 echo
-	fi
-	if [ -e "commands.lua" ]; then
-	 rm commands.lua
-	 wget http://www.folder98.ir/1395/07/1475513938.txt
-	 mv 1475513938.txt commands-self.lua
-	elif [ -e "commands-self.lua" ]; then
-	 echo
-	fi
-	cd ..
-   
-  while true; do
-   rm -r ../.telegram-cli/state
-   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./system/self.lua -l 1 -E $@
-   sleep 3
-  done
 elif [ "$1" = "help" ]; then
   echo ""
   echo "You can use:"
-  sleep 0.5
   echo ""
-  echo "$0 api"
-  echo "Api mod for your bot"
-  sleep 2
-  echo ""
-  echo "$0 self"
-  echo "Self mod for your account"
   sleep 2
   echo ""
   echo "$0"
