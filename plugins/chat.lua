@@ -43,7 +43,7 @@ local function save_value(msg, name, value)
   end
   if hash then
     redis:hset(hash, name, value)
-    return name..'\n Saved \n Powered By @To_My_Amigos'
+    return name..'\n Saved \n Powered By @Sajjad_Hitler'
   end
 end
 local function del_value(msg, name)
@@ -56,7 +56,7 @@ local function del_value(msg, name)
   end
   if hash then
     redis:hdel(hash, name)
-    return name..'\n Cleaned \n Powered By @To_My_Amigos'
+    return name..'\n Cleaned \n Powered By @Sajjad_Hitler'
   end
 end
 
@@ -68,7 +68,7 @@ local function delallchats(msg)
     for i=1, #names do
       redis:hdel(hash,names[i])
     end
-    return "All Saved Chats Have Been Cleaned \nPowered By @To_My_Amigos"
+    return "All Saved Chats Have Been Cleaned \nPowered By @Sajjad_Hitler"
 	else
 	return 
   end
